@@ -14,3 +14,38 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  select {
+    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding-right: 2rem !important;
+    color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-t from-purple-500 to-violet-500 rounded-md;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-[10px] rounded-sm;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply dark:bg-[#343434] w-20 inset-0 rounded-sm bg-[#444444];
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-400
+  }
+  select::-webkit-scrollbar-thumb{
+    @apply bg-purple-500 w-[0.1rem] h-[0.1rem];
+  }
+  .searchModal::-webkit-scrollbar-thumb{
+    @apply w-1 h-4 bg-purple-400;
+  }
+}
