@@ -8,6 +8,7 @@ import Main from "./pages/Main";
 import Trending from "./pages/Trending";
 import Fav from "./pages/Fav";
 import { ListProvider } from "./context/ListContext";
+import CoinInfo from "./components/CoinInfo";
 
 const route = createBrowserRouter([
   {
@@ -15,8 +16,16 @@ const route = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        index: true,
-        element: <Main />
+        children: [
+          {
+            path: "/",
+            element: <Main />
+          },
+          {
+            path: ":id",
+            element: <CoinInfo />
+          }
+        ]
       }, {
         path: "trending",
         element: <Trending />
