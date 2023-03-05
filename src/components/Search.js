@@ -28,11 +28,11 @@ const SearchInput = (props) => {
     }
     return (
         <>
-            <form className="relative w-full lg:basis-[40%] lg:py-1 justify-center flex items-center rounded-md bg-[#313131]" >
+            <form className="relative w-full py-2 lg:basis-[40%] lg:py-1 justify-center flex items-center rounded-md bg-[#313131]" >
                 <button onClick={submitHandler}>
                     < HiOutlineSearch className="absolute w-4 h-4 md:w-5 md:h-5 top-[26%] left-3" />
                 </button>
-                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-2 md:pl-6 outline-none lg:pl-10 sm:py-1 md:py-2 h-full rounded-md bg-[#313131] " />
+                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-10 md:pl-6 outline-none lg:pl-10 sm:py-1 md:py-2 h-full rounded-md bg-[#313131] " />
             </form>
             {
                 searchText.length > 0 ?
@@ -135,8 +135,8 @@ const Search = () => {
     return (
         <div className="flex flex-col w-[95%] md:w-[85%] mx-auto lg:flex-row p-1 sm:p-2 md:p-3 lg:p-4 justify-between items-center relative">
             <SearchInput searchRefresh={searchRefresh} />
-            <div className="flex w-max justify-end lg:space-x-12 last:space-x-6 " >
-                <div className="flex items-center justify-center space-x-4 md:space-x-8 lg:space-x-3" >
+            <div className="flex text-xs flex-col md:flex-row w-max mt-3 sm:mt-5 space-y-3 sm:space-y-5 justify-start items-center md:items-start md:justify-end lg:space-x-12 last:space-x-6 " >
+                <div className="flex items-center justify-center space-x-5  md:space-x-8 lg:space-x-3" >
                     <div className="" >Currency</div>
                     <select onChange={(e) => setCurrency(e.target.value)} defaultValue="usd" className="bg-[#313131] uppercase rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                         {
@@ -147,7 +147,7 @@ const Search = () => {
                         }
                     </select>
                 </div>
-                <div className="flex items-center justify-center space-x-4 md:space-x-8 lg:space-x-3" >
+                <div className="flex items-center justify-center space-x-5 md:space-x-8 lg:space-x-3" >
                     <div className="" >Sort</div>
                     <select defaultValue="market_cap_desc" onChange={(e) => setOrder(e.target.value)} className="bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                         {
@@ -157,11 +157,10 @@ const Search = () => {
                             )
                         }
                     </select>
+                    <button onClick={refreshPage} className="flex items-center justify-center" >
+                        < IoMdRefresh className="fill-purple-500 hover:fill-white  w-4 h-4 sm:w-5 sm:h-5 md:h-6 md:w-6 lg:h-7 lg:w-7 " />
+                    </button>
                 </div>
-                <button onClick={refreshPage} className="flex items-center justify-center" >
-                    < IoMdRefresh className="fill-purple-500 hover:fill-white  w-4 h-4 sm:w-5 sm:h-5 md:h-6 md:w-6 lg:h-7 lg:w-7 " />
-                </button>
-
             </div >
         </div >
     )

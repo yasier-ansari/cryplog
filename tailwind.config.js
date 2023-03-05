@@ -8,10 +8,13 @@ module.exports = {
       fontFamily: {
         pri: ["Barlow", "sans-serif"],
         sec: ["inter", "sans-serif"],
+        ter: ["DM Sans", "inter"],
         code: ["monospace"]
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   darkMode: 'class',
 }

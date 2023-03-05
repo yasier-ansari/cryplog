@@ -30,7 +30,7 @@ const Paginator = () => {
             <button onClick={pageShifterLeft} className={`flex items-center justify-center rounded-xl bg-purple-500  p-1 md:p-2 h-6 w-6 md:h-9 md:w-9 `} >
                 <TbArrowNarrowLeft className='stroke-[3px] ' />
             </button>
-            <div className="flex space-x-2 md:space-x-3 lg:space-x-4 items-center justify-center " >
+            <div className="flex space-x-2 text-xs md:text-sm lg:text-base md:space-x-3 lg:space-x-4 items-center justify-center " >
                 {
                     (currentPage !== 1 && currentPage !== 2 && currentPage !== 3) && (<button onClick={(e) => { setCurrentPage(1) }} className="flex items-center justify-center rounded-xl bg-purple-900/60 p-1 md:p-2 h-6 w-6 md:h-9 md:w-9 " >1</button>)
                 }

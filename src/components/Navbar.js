@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom"
 
 
 const Navbar = () => {
-    const Links = [{ path: "/", name: "Listed" }, { path: "/trending", name: "Trending" }, { path: "/fav", name: "Favorite" }]
+    // , { path: "/fav", name: "Favorite" }
+    const Links = [{ path: "/", name: "Listed" }, { path: "/trending", name: "Trending" }]
     return (
         <nav className=" mt-2 md:mt-4 font-semibold flex text-sm md:text-base justify-between items-center mx-auto space-x-6 sm:space-x-8 md:space-x-10 lg:space-x-12 max-w-lg p-1 md:p-2 lg:p-3" >
             {Links.map((link, i) => (
