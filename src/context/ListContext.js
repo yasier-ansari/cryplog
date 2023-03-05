@@ -56,7 +56,7 @@ export const ListProvider = ({ children }) => {
 
     useEffect(() => {
         getApiData();
-    }, [coinSearch, currency, order, currentPage])
+    }, [coinSearch, currency, order, currentPage]);
 
     return (
         <ListContext.Provider value={{ mode, setMode, apiData, searchData, setSearchData, getSearchData, setCoinSearch, setCurrency, setOrder, setCurrentPage, currentPage, refreshPage, getCoinData, coinData }} >

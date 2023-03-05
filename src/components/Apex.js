@@ -23,7 +23,7 @@ const RenderLineChart = ({ data }) => (
         <LineChart data={data}>
             <CartesianGrid stroke="#ffffff20" />
             {
-                data[0].price ? (<YAxis domain={["auto", "auto"]} />) : (<YAxis domain={["auto", "auto"]} hide />)
+                data[0].price < 100000 ? (<YAxis domain={['dataMin - 100', 'dataMax + 100']} />) : (<YAxis domain={['dataMin - 100', 'dataMax + 100']} hide />)
             }
             {
                 data.length > 40 ? (

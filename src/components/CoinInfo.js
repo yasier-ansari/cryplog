@@ -42,9 +42,9 @@ const CoinInfo = () => {
                 coinData ? (
                     <>
                         <div className="flex items-center justify-between">
-                            <div className="flex items-center align-middle space-x-1 md:space-x-2 lg:space-x-3" >
-                                <img src={coinData.image.small} className="rounded-full w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 " alt="coin" />
-                                <p className="text-xl md:text-2xl capitalize lg:text-3xl font-semibold">{coinData.name}</p>
+                            <div className="flex items-center justify-between align-middle space-x-1 md:space-x-2 lg:space-x-3" >
+                                <img src={coinData.image?.small || coinData.image.large} className="rounded-full w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 " alt="coin" />
+                                <p className="text-xl md:text-2xl capitalize lg:text-3xl font-semibold ">{coinData.name}</p>
                                 <p className=" flex px-1 uppercase bg-purple-600/40 font-semibold rounded-lg text-xs sm:px-2 sm:py-1 h-max w-max ">
                                     {coinData.symbol}
                                 </p>

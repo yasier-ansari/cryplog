@@ -30,9 +30,9 @@ const SearchInput = (props) => {
         <>
             <form className="relative w-full py-2 lg:basis-[40%] lg:py-1 justify-center flex items-center rounded-md bg-[#313131]" >
                 <button onClick={submitHandler}>
-                    < HiOutlineSearch className="absolute w-4 h-4 md:w-5 md:h-5 top-[26%] left-3" />
+                    < HiOutlineSearch className="absolute w-4 h-4 md:w-6 md:h-6 top-[26%] left-3 md:left-4 md:top-[26%] lg:top-[20%] " />
                 </button>
-                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-10 md:pl-6 outline-none lg:pl-10 sm:py-1 md:py-2 h-full rounded-md bg-[#313131] " />
+                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-10  outline-none md:pl-12  lg:pl-12 sm:py-1 md:py-2 h-full rounded-md bg-[#313131] " />
             </form>
             {
                 searchText.length > 0 ?
@@ -135,7 +135,7 @@ const Search = () => {
     return (
         <div className="flex flex-col w-[95%] md:w-[85%] mx-auto lg:flex-row p-1 sm:p-2 md:p-3 lg:p-4 justify-between items-center relative">
             <SearchInput searchRefresh={searchRefresh} />
-            <div className="flex text-xs flex-col md:flex-row w-max mt-3 sm:mt-5 space-y-3 sm:space-y-5 justify-start items-center md:items-start md:justify-end lg:space-x-12 last:space-x-6 " >
+            <div className="flex text-xs md:text-base flex-col md:flex-row w-max mt-3 sm:mt-5 lg:mt-0 space-y-3 sm:space-y-5 justify-start items-center md:space-y-0 md:justify-end lg:space-x-12 last:space-x-6 " >
                 <div className="flex items-center justify-center space-x-5  md:space-x-8 lg:space-x-3" >
                     <div className="" >Currency</div>
                     <select onChange={(e) => setCurrency(e.target.value)} defaultValue="usd" className="bg-[#313131] uppercase rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
