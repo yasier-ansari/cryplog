@@ -36,7 +36,7 @@ code {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @apply dark:bg-[#343434] w-20 inset-0 rounded-sm bg-[#444444];
+    @apply bg-slate-200 dark:bg-[#343434] w-20 inset-0 rounded-sm;
   }
 
   ::-webkit-scrollbar-thumb:hover {

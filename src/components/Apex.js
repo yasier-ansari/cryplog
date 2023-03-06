@@ -21,7 +21,7 @@ function CustomTooltip({ payload, label, active }) {
 const RenderLineChart = ({ data }) => (
     <ResponsiveContainer ResponsiveContainer width="100%" height="100%" >
         <LineChart data={data}>
-            <CartesianGrid stroke="#ffffff20" />
+            <CartesianGrid stroke="#31231220" />
             {
                 data[0].price < 100000 ? (<YAxis domain={['dataMin - 100', 'dataMax + 100']} />) : (<YAxis domain={['dataMin - 100', 'dataMax + 100']} hide />)
             }
@@ -91,7 +91,7 @@ const Apex = ({ cid, days, duration, title }) => {
         <>
             {
                 chartData ? (
-                    <div className="h-80 w-full -ml-8 sm:-ml-10 md:ml-0 " >
+                    <div className={`h-80 w-full ${title === "prices" && ' sm:-ml-10 '} ${title === "market_caps" && ' sm:-ml-2 '} ${title === "total_volumes" && ' sm:-ml-2 '} md:ml-0 `} >
                         <RenderLineChart data={chartData} />
                     </div>
                 ) : (

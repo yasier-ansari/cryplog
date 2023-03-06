@@ -16,10 +16,10 @@ const Trending = () => {
                             {
                                 trendingData.map((data, key) => {
                                     return (
-                                        <div className="flex justify-between mb-12 w-[75%] md:w-[50%] lg:w-[40%] h-40 overflow-visible bg-purple-900/30 rounded-lg relative" >
+                                        <div key={key} className="flex justify-between mb-12 w-[75%] md:w-[40%] h-40 overflow-visible bg-purple-900/30 rounded-lg relative" >
                                             <div className="flex flex-col ml-2 basis-[80%] justify-between items-start p-2   ">
-                                                <p className=" text-xl lg:text-2xl  font-semibold " >{data.item.name}</p>
-                                                <p className=" text-xs lg:text-sm font-medium text-gray-400 mb-2 " >{data.item.symbol}</p>
+                                                <p className=" text-lg lg:text-2xl font-semibold " >{data.item.name}</p>
+                                                <p className=" text-xs lg:text-sm font-medium text-gray-200 dark:text-gray-400 mb-2 " >{data.item.symbol}</p>
                                                 <p className="flex items-center justify-center space-x-2 " > <span>
                                                     <FiTrendingUp />
                                                 </span>
@@ -33,11 +33,11 @@ const Trending = () => {
                                                     <span>
                                                         {data.item.price_btc.toFixed(20)}
                                                     </span> </p>
-                                                <Link to={`/${data.item.id}`} >
+                                                <Link to={`/${data.item.id}`} className="font-semibold" >
                                                     See more ...
                                                 </Link>
                                             </div>
-                                            <img src={data.item.large} alt={data.item.slug} className=" absolute h-24 sm:h-32 md:h-40 lg:h-44 -top-8 md:-top-4 -right-8 md:-right-12 rounded-full " />
+                                            <img src={data.item.large} alt={data.item.slug} className=" absolute h-24 sm:h-32 lg:h-44 -top-8 md:-top-8 -right-8 md:-right-12 rounded-full " />
                                         </div>
                                     )
                                 }

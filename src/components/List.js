@@ -11,8 +11,8 @@ const List = () => {
             <div className="flex flex-col rounded-sm items-center justify-center " >
                 {
                     apiData ? (
-                        <table className=" table-auto w-full border" >
-                            <thead className="text-base text-center font-medium md:text-lg border-b bg-[#313131]" >
+                        <table className=" table-auto w-full dark:border border-2 border-black/30 dark:border-gray-300 " >
+                            <thead className="text-base text-center font-medium md:text-lg dark:border-gray-300 border-black/50 border-b bg-[#f9f9ff] dark:bg-[#313131]" >
                                 <tr>
                                     <th className="py-1 md:py-2 " >Asset</th>
                                     <th className="py-1 md:py-2 md:table-cell hidden " >Name</th>
@@ -27,7 +27,7 @@ const List = () => {
                                 {
                                     apiData.map((res, key) => {
                                         return (
-                                            <tr key={key} className="border-b uppercase last:border-b-0 text-center hover:bg-black " >
+                                            <tr key={key} className="dark:border-b dark:border-gray-300 border-black/30  border-b-2 first:border-t-2 dark:first:border-t uppercase last:border-b-0 text-center hover:bg-purple-200 dark:hover:bg-black " >
                                                 <td className=" flex ml-2 items-center space-x-1 py-1 sm:py-2 md:py-3 lg:py-4 px-2 sm:px-3 md:px-4" >
                                                     <button className="group outline-none h-5 w-3 sm:h-6 sm:w-4 md:h-8 md:w-5 cursor-pointer " >
                                                         <HiOutlineBookmark className=" group-hover:fill-purple-600 group-hover:text-purple-600" />
@@ -38,7 +38,7 @@ const List = () => {
                                                     </Link>
 
                                                 </td>
-                                                <td className=" py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 md:table-cell hidden " >
+                                                <td className=" py-1 md:py-2 lg:py-3 px-2 font-medium sm:px-3 md:px-4 md:table-cell hidden " >
                                                     <Link to={`/${res.id}`} >
                                                         {res.name}
                                                     </Link>
@@ -59,7 +59,7 @@ const List = () => {
                                 }
                             </tbody>
                         </table>) : (
-                        <div className="h-60 border border-gray-400 rounded-lg bg-[#3a3a3a] w-full flex space-x-4 font-semibold justify-center items-center ">
+                        <div className="h-60 border border-gray-400 rounded-lg bg-purple-200/50 dark:bg-[#3a3a3a] w-full flex space-x-4 font-semibold justify-center items-center ">
                             <div className="h-6 w-6 bg-transparent animate-spin border-purple-500 rounded-full border-b-gray-400 border-4 "  ></div>
                             <p className="text-lg md:text-xl lg:text-2xl" >Searching...</p>
                         </div>

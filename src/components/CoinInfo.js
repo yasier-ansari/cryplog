@@ -45,7 +45,7 @@ const CoinInfo = () => {
                             <div className="flex items-center justify-between align-middle space-x-1 md:space-x-2 lg:space-x-3" >
                                 <img src={coinData.image?.small || coinData.image.large} className="rounded-full w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 " alt="coin" />
                                 <p className="text-xl md:text-2xl capitalize lg:text-3xl font-semibold ">{coinData.name}</p>
-                                <p className=" flex px-1 uppercase bg-purple-600/40 font-semibold rounded-lg text-xs sm:px-2 sm:py-1 h-max w-max ">
+                                <p className="flex px-1 uppercase bg-purple-600/40 font-semibold rounded-lg text-xs sm:px-2 sm:py-1 h-max w-max ">
                                     {coinData.symbol}
                                 </p>
                             </div>
@@ -69,11 +69,11 @@ const CoinInfo = () => {
                             </div>
                         </div>
                         <div className="flex items-center justify-between">
-                            <div className="flex items-center text-xs font-medium  space-x-3 sm:space-x-4 md:space-x-6  " >
-                                <p className="rounded-lg bg-[#121212] py-1 px-2 text-xs md:px-3" >
+                            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 items-center text-xs font-medium md:space-x-6  " >
+                                <p className="flex items-center justify-center rounded-lg bg-slate-200 dark:bg-[#121212] py-1 px-2 text-xs md:px-3" >
                                     # {coinData.market_cap_rank || 'Nan'}&nbsp; Rank
                                 </p>
-                                <div className="flex items-center space-x-2 rounded-lg bg-[#121212] py-1 px-2 text-xs md:px-3" >
+                                <div className="flex items-center space-x-2 rounded-lg bg-slate-200 dark:bg-[#121212] py-1 px-2 text-xs md:px-3" >
                                     <FaStar className="fill-purple-400 " />
                                     <p>
                                         {Math.ceil(coinData.community_score) || 0} Score
@@ -96,7 +96,7 @@ const CoinInfo = () => {
                             </div>
                         </div>
                         <div className=" mb-4 md:mb-6 lg:mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 md:gap-x-8 md:gap-y-8 place-items-center place-content-center items-center justify-center ">
-                            <div className="flex flex-col w-40 h-20 sm:w-60 md:w-48 md:h-28 lg:w-56 bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
+                            <div className="flex flex-col w-36 h-20 sm:w-48 md:w-48 md:h-28 lg:w-56 bg-slate-200 dark:bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
                                 <div className="text-xs md:text-base flex font-medium items-center justify-start space-x-1 md:space-x-2">
                                     <TbActivityHeartbeat />
                                     <p className="text-xs md:text-base" >
@@ -124,7 +124,7 @@ const CoinInfo = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col w-40 h-20 sm:w-60 md:w-48 md:h-28 lg:w-56 bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
+                            <div className="flex flex-col w-36 h-20 sm:w-48 md:w-48 md:h-28 lg:w-56 bg-slate-200 dark:bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
                                 <div className="text-xs md:text-base flex font-medium items-center justify-start space-x-1 md:space-x-2">
                                     <CgSize />
                                     <p className="text-xs md:text-base" >
@@ -142,7 +142,7 @@ const CoinInfo = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col w-40 h-20 sm:w-60 md:w-48 md:h-28 lg:w-56 bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
+                            <div className="flex flex-col w-36 h-20 sm:w-48 md:w-48 md:h-28 lg:w-56 bg-slate-200 dark:bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
                                 <div className="text-xs md:text-base flex font-medium items-center justify-start space-x-1 md:space-x-2">
                                     <BsWater />
                                     <p className="text-xs md:text-base" >
@@ -170,7 +170,7 @@ const CoinInfo = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col w-40 h-20 sm:w-60 md:w-48 md:h-28 lg:w-56 bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
+                            <div className="flex flex-col w-36 h-20 sm:w-48 md:w-48 md:h-28 lg:w-56 bg-slate-200 dark:bg-[#2f2e35] justify-between rounded-lg px-2 md:px-3 py-2 md:py-3 " >
                                 <div className="text-xs md:text-base flex font-medium items-center justify-start space-x-1 md:space-x-2">
                                     <SlSupport />
                                     <p className="text-xs md:text-base" >
@@ -189,24 +189,24 @@ const CoinInfo = () => {
                                 </div>
                             </div>
                         </div>
-                        <span dangerouslySetInnerHTML={{ __html: `${coinData.description.en}` }} class="prose prose-purple font-ter no-underline text-white max-w-full"></span>
-                        <div className="flex content-center flex-col justify-center space-x-0">
-                            <div className="flex items-center justify-between font-semibold text-2xl" >
+                        <span dangerouslySetInnerHTML={{ __html: `${coinData.description.en}` }} class="prose prose-purple font-ter no-underline text-black dark:text-white max-w-full"></span>
+                        <div className="flex flex-col justify-between space-x-0">
+                            <div className="flex items-center justify-between font-semibold text-lg lg:text-xl" >
                                 Price Metrics
                             </div>
-                            <div className="flex items-center justify-between font-base text-lg text-gray-400/50 " >
+                            <div className="flex items-center justify-between font-base text-lg text-gray-400 dark:text-gray-400/50 " >
                                 Get the latest graph update on major crypto currency
                             </div>
                             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between my-2 md:my-4 " >
-                                <div className="flex space-x-6 md:space-x-8 lg:space-x-10" >
-                                    <button onClick={(e) => { setTitle("prices") }} className={`flex items-center justify-center ${title === "prices" && 'bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Price</button>
-                                    <button onClick={(e) => { setTitle("market_caps") }} className={`flex items-center justify-center ${title === "market_caps" && 'bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Market Cap</button>
-                                    <button onClick={(e) => { setTitle("total_volumes") }} className={`flex items-center justify-center ${title === "total_volumes" && 'bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Volume </button>
+                                <div className="flex space-x-6 md:space-x-8 lg:space-x-10  " >
+                                    <button onClick={(e) => { setTitle("prices") }} className={`flex items-center justify-center ${title === "prices" && ' text-white bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Price</button>
+                                    <button onClick={(e) => { setTitle("market_caps") }} className={`flex items-center justify-center ${title === "market_caps" && 'text-white bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Market Cap</button>
+                                    <button onClick={(e) => { setTitle("total_volumes") }} className={`flex items-center justify-center ${title === "total_volumes" && 'text-white bg-purple-600'} bg-purple-400/20 px-2 md:px-3 py-1 rounded-lg font-medium text-sm  `} >Volume </button>
                                 </div>
                                 <div className="flex justify-between items-center space-x-4 sm:space-x-6 md:space-x-8" >
                                     <div className="flex items-center space-x-1 sm:space-x-2" >
                                         <MdCalendarToday className="h-8 w-8" />
-                                        <select onChange={(e) => setGraphTime(e.target.value)} className="bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
+                                        <select onChange={(e) => setGraphTime(e.target.value)} className=" bg-slate-200 text-black dark:text-white dark:bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                                             {
                                                 grp.map((cur, key) => {
                                                     return (<option value={cur} key={key} >{cur} days</option>)
@@ -217,7 +217,7 @@ const CoinInfo = () => {
                                     </div>
                                     <div className="flex items-center space-x-1 sm:space-x-2" >
                                         <AiOutlineFieldTime className="h-8 w-8" />
-                                        <select onChange={(e) => setGraphDuration(e.target.value)} className="bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
+                                        <select onChange={(e) => setGraphDuration(e.target.value)} className="bg-slate-200 text-black dark:text-white dark:bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                                             {
                                                 hrgrp.map((cur, key) => {
                                                     return (<option value={cur} key={key} >{cur} days</option>)
@@ -235,36 +235,36 @@ const CoinInfo = () => {
                         <div class="flex items-center justify-center space-x-3 sm:space-x-4 lg:space-x-6  my-4">
                             {
                                 coinData.links.homepage[0] && (
-                                    <a href={coinData.links.homepage[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 bg-purple-500 rounded-full "  >
-                                        <HiHome />
+                                    <a href={coinData.links.homepage[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 bg-purple-500 rounded-full "  >
+                                        <HiHome className=" fill-white dark:fill-black " />
                                     </a>
                                 )
                             }
                             {
                                 coinData.links.repos_url.github[0] && (
-                                    <a href={coinData.links.repos_url.github[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 bg-purple-500 rounded-full "  >
-                                        <AiOutlineGithub />
+                                    <a href={coinData.links.repos_url.github[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 bg-purple-500 rounded-full "  >
+                                        <AiOutlineGithub className=" fill-white dark:fill-black " />
                                     </a>
                                 )
                             }
                             {
                                 coinData.links.facebook_username && (
-                                    <a href={coinData.links.facebook_username} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 bg-purple-500 rounded-full "  >
-                                        <FaFacebookF />
+                                    <a href={coinData.links.facebook_username} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 bg-purple-500 rounded-full "  >
+                                        <FaFacebookF className=" fill-white dark:fill-black " />
                                     </a>
                                 )
                             }
                             {
                                 coinData.links.subreddit_url && (
-                                    <a href={coinData.links.repos_url.sub_reddit_url} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 bg-purple-500 rounded-full "  >
-                                        <FaRedditAlien />
+                                    <a href={coinData.links.repos_url.sub_reddit_url} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 bg-purple-500 rounded-full "  >
+                                        <FaRedditAlien className=" fill-white dark:fill-black " />
                                     </a>
                                 )
                             }
                             {
                                 coinData.links.twitter_screen_name && (
-                                    <a href={coinData.links.repos_url.github[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 bg-purple-500 rounded-full "  >
-                                        <AiOutlineTwitter />
+                                    <a href={coinData.links.repos_url.github[0]} target="_blank" rel="noreferrer" className="flex items-center justify-center p-1 md:p-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 bg-purple-500 rounded-full "  >
+                                        <AiOutlineTwitter className=" fill-white dark:fill-black " />
                                     </a>
                                 )
                             }

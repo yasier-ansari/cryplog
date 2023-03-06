@@ -4,7 +4,6 @@ import { createContext, useEffect, useState } from "react";
 export const ListContext = createContext({});
 
 export const ListProvider = ({ children }) => {
-    const [mode, setMode] = useState("dark")
     const [apiData, setApiData] = useState();
     const [searchData, setSearchData] = useState();
     const [coinSearch, setCoinSearch] = useState("");
@@ -59,7 +58,7 @@ export const ListProvider = ({ children }) => {
     }, [coinSearch, currency, order, currentPage]);
 
     return (
-        <ListContext.Provider value={{ mode, setMode, apiData, searchData, setSearchData, getSearchData, setCoinSearch, setCurrency, setOrder, setCurrentPage, currentPage, refreshPage, getCoinData, coinData }} >
+        <ListContext.Provider value={{ apiData, searchData, setSearchData, getSearchData, setCoinSearch, setCurrency, setOrder, setCurrentPage, currentPage, refreshPage, getCoinData, coinData }} >
             {children}
         </ListContext.Provider>
     )

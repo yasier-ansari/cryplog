@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+  
+  ![Logo-Dark](./public/cryplog-dark.png#gh-dark-mode-only)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo-Light](./public/cryplog-light.png#gh-light-mode-only)
 
-## Available Scripts
+</p>
 
-In the project directory, you can run:
+<h3 align="center"> crypto encyclopedia </h3>
 
-### `npm start`
+<div align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![Status](https://img.shields.io/badge/website-hosted-blue.svg)](https://cryplog.vercel.app/)
+[![GitHub Issues](https://img.shields.io/github/issues/yasier-ansari/cryplog.svg)](https://github.com/yasier-ansari/cryplog/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yasier-ansari/cryplog.svg)](https://github.com/yasier-ansari/cryplog/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</div>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center"> 
+Stay on top of the crypto game with our sleek and intuitive information hub.
+    <br> 
+</p>
 
-### `npm run build`
+## 📝 Table of Contents
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [📝 Table of Contents](#-table-of-contents)
+- [🧐 About ](#-about-)
+- [🏁 Getting Started ](#-getting-started-)
+- [🎈 Usage ](#-usage-)
+- [⛏️ Built Using ](#️-built-using-)
+- [✍️ Authors ](#️-authors-)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧐 About <a name = "about"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Discover the exciting world of cryptocurrencies with our sleek and intuitive information hub. Get valuable insights on various digital currencies, including prices, market capitalization, and trading volumes. Our cutting-edge technology and minimalist design keep you up-to-date on the latest trends and developments in the crypto market, whether you're a seasoned investor or just starting out. So, explore our website today and stay ahead of the game!
 
-### `npm run eject`
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clone/ Fork
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  Fork our repository or just clone this repo using your Command prompt or bash terminal
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```
+  git clone www.github.com/yasier-ansari/cryplog.git
+  ```
 
-## Learn More
+- Install Dependencies
+  Once clones, just go to the `./cryplog` directory and install all of the necessary packages and dependencies using below command in your terminal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ```
+  npm install
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run on Local Server
+  Yeah, you have succesfully downloaded the code It's now time to run it on your localhost server
+  ```
+  npm run start
+  ```
 
-### Code Splitting
+## 🎈 Usage <a name="usage"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add notes about how to use the system.
 
-### Analyzing the Bundle Size
+## ⛏️ Built Using <a name = "built_using"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [React](https://reactjs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [TailwindCSS](https://tailwindcss.com/) - CSS utility
+- [CoinGecko](https://coingecko.com/) - API backend
 
-### Making a Progressive Web App
+## ✍️ Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [@yasier_ansari](https://github.com/yasier-ansari) - Idea & Initial work
 
-### Advanced Configuration
+See also the list of [contributors](https://github.com/yasier-ansari/cryplog/contributors) who participated in this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Hat tip to anyone whose code was used
+- Inspiration
+- References -->

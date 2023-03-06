@@ -10,6 +10,7 @@ import Fav from "./pages/Fav";
 import { ListProvider } from "./context/ListContext";
 import CoinInfo from "./components/CoinInfo";
 import { TrendProvider } from "./context/TrendingContext";
+import { SaveProvider } from "./context/SaveContext";
 
 const route = createBrowserRouter([
   {
@@ -43,7 +44,9 @@ root.render(
   <React.StrictMode>
     <ListProvider>
       <TrendProvider>
-        <RouterProvider router={route} />
+        <SaveProvider>
+          <RouterProvider router={route} />
+        </SaveProvider>
       </TrendProvider>
     </ListProvider>
   </React.StrictMode>

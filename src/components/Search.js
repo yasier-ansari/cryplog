@@ -28,18 +28,18 @@ const SearchInput = (props) => {
     }
     return (
         <>
-            <form className="relative w-full py-2 lg:basis-[40%] lg:py-1 justify-center flex items-center rounded-md bg-[#313131]" >
+            <form className="relative w-full py-2 lg:basis-[40%] lg:py-1 justify-center flex items-center rounded-md bg-slate-200 dark:bg-[#313131]" >
                 <button onClick={submitHandler}>
                     < HiOutlineSearch className="absolute w-4 h-4 md:w-6 md:h-6 top-[26%] left-3 md:left-4 md:top-[26%] lg:top-[20%] " />
                 </button>
-                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-10  outline-none md:pl-12  lg:pl-12 sm:py-1 md:py-2 h-full rounded-md bg-[#313131] " />
+                <input onChange={searchHandler} value={searchText} type="text" placeholder="Search..." className=" text-sm md:text-base block w-full pl-10  outline-none md:pl-12  lg:pl-12 sm:py-1 md:py-2 h-full rounded-md bg-slate-200 dark:bg-[#313131] " />
             </form>
             {
                 searchText.length > 0 ?
-                    (<ul className="absolute searchModal inset-0 top-[3.5rem] md:left-3 lg:left-4 w-full max-h-80 lg:w-[38.5%] h-max rounded-md bg-[#414141] overflow-x-hidden  "  >
+                    (<ul className="absolute searchModal inset-0 top-[3.5rem] md:left-3 lg:left-4 w-full max-h-80 lg:w-[38.5%] h-max rounded-md bg-slate-300/90 dark:bg-[#41414190] overflow-x-hidden  "  >
                         {
                             searchData ? searchData.map((data, key) => (
-                                <button onClick={(e) => searchClearer(data.id)} key={key} className="hover:bg-purple-900 flex items-center justify-between space-x-4 md:space-x-3 w-full h-max py-1 px-3 md:px-4 md:py-2 lg:px-5 lg:py-3 " >
+                                <button onClick={(e) => searchClearer(data.id)} key={key} className=" hover:bg-purple-500 hover:text-white dark:hover:bg-purple-900 flex items-center justify-between space-x-4 md:space-x-3 w-full h-max py-1 px-3 md:px-4 md:py-2 lg:px-5 lg:py-3 " >
                                     <img src={data.large} alt={data.name} className="w-3 h-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
                                     <p className="font-semibold basis-[80%] text-start " >{data.name}</p>
                                     <p className="uppercase text-xs basis-[15%] " >{data.symbol}</p>
@@ -138,7 +138,7 @@ const Search = () => {
             <div className="flex text-xs md:text-base flex-col md:flex-row w-max mt-3 sm:mt-5 lg:mt-0 space-y-3 sm:space-y-5 justify-start items-center md:space-y-0 md:justify-end lg:space-x-12 last:space-x-6 " >
                 <div className="flex items-center justify-center space-x-5  md:space-x-8 lg:space-x-3" >
                     <div className="" >Currency</div>
-                    <select onChange={(e) => setCurrency(e.target.value)} defaultValue="usd" className="bg-[#313131] uppercase rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
+                    <select onChange={(e) => setCurrency(e.target.value)} defaultValue="usd" className=" text-black dark:text-white bg-slate-300 dark:bg-[#313131] uppercase rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                         {
                             curr.map((cur, key) => {
                                 return (<option value={cur} key={key} >{cur}</option>)
@@ -149,7 +149,7 @@ const Search = () => {
                 </div>
                 <div className="flex items-center justify-center space-x-5 md:space-x-8 lg:space-x-3" >
                     <div className="" >Sort</div>
-                    <select defaultValue="market_cap_desc" onChange={(e) => setOrder(e.target.value)} className="bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
+                    <select defaultValue="market_cap_desc" onChange={(e) => setOrder(e.target.value)} className=" bg-slate-300 text-black dark:text-white dark:bg-[#313131] rounded-md h-full w-full px-1 md:px-2 lg:px-3 py-1 md:py-2 outline-none " >
                         {
                             ord.map((cur, key) => {
                                 return (<option value={cur} key={key} >{cur}</option>)
@@ -158,7 +158,7 @@ const Search = () => {
                         }
                     </select>
                     <button onClick={refreshPage} className="flex items-center justify-center" >
-                        < IoMdRefresh className="fill-purple-500 hover:fill-white  w-4 h-4 sm:w-5 sm:h-5 md:h-6 md:w-6 lg:h-7 lg:w-7 " />
+                        < IoMdRefresh className=" hover:fill-purple-700 fill-purple-500 dark:hover:fill-white  w-4 h-4 sm:w-5 sm:h-5 md:h-6 md:w-6 lg:h-7 lg:w-7 " />
                     </button>
                 </div>
             </div >
