@@ -13,13 +13,13 @@ export const ListProvider = ({ children }) => {
     const [coinData, setCoinData] = useState();
 
     const getApiData = async () => {
+        setApiData();
         let data;
         try {
             data = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${order}&per_page=20&page=${currentPage}&sparkline=false&price_change_percentage=1h%2C24h%2C7d`)
                 .then((res) => res.json())
             setApiData(data)
         } catch (error) {
-            console.log(error)
         }
     }
 
@@ -30,7 +30,7 @@ export const ListProvider = ({ children }) => {
                 .then((res) => res.json())
             setSearchData(query.coins)
         } catch (error) {
-            console.log(error)
+
         }
     }
 
@@ -42,14 +42,14 @@ export const ListProvider = ({ children }) => {
     }
 
     const getCoinData = async (coinId) => {
+        setCoinData()
         let data;
         try {
             data = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=false&sparkline=false`)
                 .then((res) => res.json())
-            console.log(data)
             setCoinData(data)
         } catch (error) {
-            console.log(error)
+            setCoinData({ error: "coin not found" });
         }
     }
 

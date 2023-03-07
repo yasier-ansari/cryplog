@@ -26,7 +26,7 @@ const Paginator = () => {
     }, [currentPage])
 
     return (
-        <div className="my-3 md:py-4 text-white dark:text-black flex items-center space-x-4 md:space-x-6 lg:space-x-8" >
+        <div className="my-3 md:py-4 text-white flex items-center space-x-4 md:space-x-6 lg:space-x-8" >
             <button onClick={pageShifterLeft} className={`flex items-center justify-center rounded-xl bg-purple-500  p-1 md:p-2 h-6 w-6 md:h-9 md:w-9 `} >
                 <TbArrowNarrowLeft className='stroke-[3px] ' />
             </button>

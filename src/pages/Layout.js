@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import Header from "../components/Header"
 import Navbar from "../components/Navbar"
 import { useParams } from 'react-router-dom'
+import { ThemeProvider } from "../context/ThemeContext"
 
 const Layout = () => {
     const { id } = useParams();

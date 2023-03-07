@@ -31,6 +31,7 @@ Stay on top of the crypto game with our sleek and intuitive information hub.
 - [🧐 About ](#about)
 - [🏁 Getting Started ](#getting_started)
 - [🎈 ScreenShot ](#screenshot)
+- [🍀 Future Scope ](#future)
 - [⛏️ Built Using ](#️built-using)
 - [✍️ Authors ](#️authors)
 
@@ -94,6 +95,18 @@ These instructions will get you a copy of the project up and running on your loc
  <img width="760" alt="img-2-dark" src="https://user-images.githubusercontent.com/76240365/223211309-5446d6af-949e-4054-b760-862f0cf9cd8b.png">
  <img width="760" alt="img-4-dark" src="https://user-images.githubusercontent.com/76240365/223211334-5e1bf818-dee6-4bc9-95fa-5eb1dfafd59e.png">
 </p>
+
+## 🎈 Work In Progress <a id="future"></a>
+
+### Favorite Page
+
+Favourite page that adds user's starred coin and let them have in localStorage without any hassle of DB. 
+
+### Crypto News
+
+Curated and trending News in Cypto domain , served right at your digital doorstep. Will integrate newsletter too
+
+
 
 ## ⛏️ Built Using <a id = "built_using"></a>
 

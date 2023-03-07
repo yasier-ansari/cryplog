@@ -11,11 +11,14 @@ import { ListProvider } from "./context/ListContext";
 import CoinInfo from "./components/CoinInfo";
 import { TrendProvider } from "./context/TrendingContext";
 import { SaveProvider } from "./context/SaveContext";
+import Error from "./components/Error";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const route = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <Error />,
     children: [
       {
         children: [
@@ -45,7 +48,9 @@ root.render(
     <ListProvider>
       <TrendProvider>
         <SaveProvider>
-          <RouterProvider router={route} />
+          <ThemeProvider>
+            <RouterProvider router={route} />
+          </ThemeProvider>
         </SaveProvider>
       </TrendProvider>
     </ListProvider>

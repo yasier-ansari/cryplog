@@ -46,7 +46,7 @@ const Trending = () => {
 
                         </>
                     ) : (
-                        <div className="h-60 border border-gray-400 rounded-lg bg-[#3a3a3a] w-full flex space-x-4 font-semibold justify-center items-center ">
+                        <div className="h-60 border border-gray-400 rounded-lg bg-slate-300 dark:bg-[#3a3a3a] w-full flex space-x-4 font-semibold justify-center items-center ">
                             <div className="h-6 w-6 bg-transparent animate-spin border-purple-500 rounded-full border-b-gray-400 border-4 "  ></div>
                             <p className="text-lg md:text-xl lg:text-2xl" >Searching...</p>
                         </div>
